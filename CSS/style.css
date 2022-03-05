@@ -1,0 +1,419 @@
+header {
+    padding: .5em var(--padding-m);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header .logo {
+    width: 3em;
+    height: 3em;
+    background: url(../Images/SVG/logo.svg) no-repeat center;
+    background-size: contain;
+}
+header .icon {
+    display: flex;
+    flex-direction: column;
+}
+header .icon div {
+    width: 1.5em;
+    height: 2px;
+    border-radius: 1px;
+    background: #000;
+    margin-bottom: .3em;
+}
+header .icon div:nth-child(2) {
+    width: .75em;
+    transition: width .3s ease-in;
+    align-self: flex-end;
+}
+header .icon:hover div:nth-child(2) {
+    width: 1.5em;
+}
+ul {
+    list-style: none;
+    background-color: var(--color-sec-b);
+    display: none;
+    position: absolute;
+    right: 7em;
+    top: 7%;
+    padding: .5em;
+    clip-path: polygon(0 5%, 85% 5%, 90% 0, 95% 5%, 100% 5%, 100% 100%, 0 100%);
+}
+ul li:nth-child(1) {
+    padding-top: calc(1em + 5%);
+}
+ul li {
+    padding: 1em 8em .5em 1em;
+    text-align: start;
+}
+ul li:not(li:nth-of-type(4)) {
+    border-bottom: 1px solid #ccc;
+}
+ul li a {
+    text-decoration: none;
+    color: #000;
+}
+.icon:hover ul {
+    display: block;
+}
+
+/* Done */
+
+.land {
+    height: 55em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: url(../Images/landing.jpg) no-repeat center;
+    background-size: cover;
+}
+.land h1 {
+    color: var(--color-m);
+    font-size: 4em;
+}
+.land h2 {
+    max-width: 30ch;
+    text-align: center;
+    line-height: 2em;
+    font-weight: 300;
+    font-size: 1.5em;
+}
+
+/* Done */
+section .head {
+    text-align: center;
+    margin-bottom: 3em;
+}
+section .head h2 {
+    font-size: clamp(5em, 7vw, 8em);
+    font-weight: 900;
+    color: var(--color-sec-h);
+}
+section .head p {
+    margin-top: -1.5em;
+    font-size: 1.2em;
+    letter-spacing: 1px;
+    opacity: .5;
+}
+
+
+section.one {
+    background-color: var(--color-sec-b);
+    padding: var(--padding-m);
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(10em, 1fr));
+    gap: 2em;
+    justify-content: center;
+}
+section.one div {
+    display: grid;
+    row-gap: 1em;
+    justify-items: center;
+}
+section.one div h3 {
+    text-transform: capitalize;
+    font-weight: 900;
+}
+section.one div p {
+    max-width: 30ch;
+    line-height: 2em; 
+    text-align: center; 
+}
+.icon.size {
+    width: 3em;
+    height: 3em;
+}
+section.one div:nth-child(1) .icon {
+    background: url(../Images/SVG/wand-magic-sparkles-solid.svg) no-repeat center;
+}
+section.one div:nth-child(2) .icon {
+    background: url(../Images/SVG/diamond.svg) no-repeat center;
+    background-size: contain;
+}
+section.one div:nth-child(3) .icon {
+    background: url(../Images/SVG/earth-asia-solid.svg) no-repeat center;
+}
+
+/* Done */
+
+section.two {
+    padding: var(--padding-m);
+}
+
+section.two .service {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(10em, 1fr));
+    gap: 2em;
+    justify-content: center;
+}
+section.two .service p {
+    max-width: 43ch;
+    margin-top: 1em;
+}
+section.two .service .col > div {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 4em;
+}
+.service .col.one div:nth-child(1) .icon {
+    background: url(../Images/SVG/palette-solid.svg) no-repeat center;
+    background-size: contain;
+}
+.service .col.one div:nth-child(2) .icon {
+    background: url(../Images/SVG/diamond.svg) no-repeat center;
+    background-size: contain;
+}
+.service .col.two div:nth-child(1) .icon {
+    background: url(../Images/SVG/square.svg) no-repeat center;
+    background-size: contain;
+}
+.service .col.two div:nth-child(2) .icon {
+    background: url(../Images/SVG/pen-ruler-solid.svg) no-repeat center;
+    background-size: contain;
+}
+
+/* Done */
+
+section.three {
+    background-color: var(--color-sec-b);
+    padding: 2em;
+}
+section.three .portfolio {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(10em, 30em));
+    gap: 2em;
+    justify-content: center;
+}
+section.three .portfolio > div {
+    height: 30em;
+}
+section.three .portfolio .one .img {
+    height: 70%;
+    background: url(../Images/portfolio-1.jpg) no-repeat center;
+    background-size: cover;
+}
+section.three .portfolio .two .img {
+    height: 70%;
+    background: url(../Images/portfolio-2.jpg) no-repeat center;
+    background-size: cover;
+}
+section.three .portfolio .three .img {
+    height: 70%;
+    background: url(../Images/portfolio-3.jpg) no-repeat center;
+    background-size: cover;
+}
+section.three .text {
+    background-color: #fff;
+    padding: 2em;
+}
+section.three .portfolio p {
+    max-width: 45ch;
+    margin-top: 1em;
+}
+
+/* Done */
+
+section.four {
+    padding: var(--padding-m);
+}
+section.four .about {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+section.four .about .one {
+    width: 15em;
+    height: 30em;
+    position: relative;
+}
+section.four .about .one::before {
+    content: '';
+    width: 100%;
+    height: 90%;
+    position: absolute;
+    right: 80%;
+    top: 5%;
+    z-index: -1;
+    background-color: var(--color-sec-h);
+    clip-path: polygon(100% 0, 60% 0, 60% 100%, 100% 100%);
+}
+section.four .about .one::after  {
+    content: '';
+    width: 17vw;
+    height: 90%;
+    position: absolute;
+    left: 80%;
+    top: 5%;
+    z-index: -1;
+    background-color: var(--color-m);
+    clip-path: polygon(0 0, 40% 0, 40% 70%, 100% 70%, 100% 80%, 0 80%, 0 0);
+}
+section.four .about .one .img {
+    width: 100%;
+    height: 100%;
+    background: url(../Images/about.jpg) no-repeat center;
+    background-size: contain;
+}
+section.four .about p {
+    max-width: 50ch;
+    word-spacing: 2px;
+    letter-spacing: 1px;
+    line-height: 2em;
+}
+section.four .two p:first-of-type {
+    opacity: 1;
+}
+section.four .two {
+    display: grid;
+    gap: 2em;
+}
+section.four hr {
+    width: 50%;
+    border-color: var(--color-m);
+}
+
+/* Done */
+
+section.five {
+    padding: var(--padding-m);
+    background-color: var(--color-sec-b);
+}
+section.five .contact {
+    display: grid;
+    gap: 1em;
+    justify-content: center;
+    text-align: center;
+}
+section.five .contact h3 {
+    font-size: clamp(1.5em, 2.5vw, 3em);
+    color:  var(--color-b);
+}
+section.five .contact a {
+    text-decoration: none;
+    color: var(--color-m);
+    font-size: clamp(1.5em, 2.5vw, 3em);
+    font-weight: bold;
+}
+section.five .social {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+section.five .social p {
+    text-transform: capitalize;
+    letter-spacing: 1px;
+    font-size: large;
+    display: inline-block;
+    font-size: clamp(1em, 1.5vw, 2em);;
+}
+.svg-icon { 
+    width: 1.5em; 
+    height: 1.5em;
+    margin-left: .5em;
+    fill: var(--color-b);
+}
+
+/* Done */
+
+footer {
+    padding: 2em var(--padding-m);
+    background-color: var(--color-b);
+    text-align: center;
+    color: var(--color-sec-h);
+    font-size: 1.2em;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+}
+footer span {
+    color: var(--color-m);
+    font-weight: bold;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+* {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    font-family: 'roboto';
+}
+:root {
+    --padding-m: 7em;
+    --color-m: #10cab7;
+    --color-sec-b: #f6f6f6;
+    --color-sec-h: #ebeced;
+    --color-b: #2c4755;
+}
+@font-face {
+    font-family: 'roboto';
+    src: url(../Font/Roboto-Bold.ttf) format('truetype'),
+        url(../Font/roboto-bold-webfont.woff) format('woff'),
+        url(../Font/roboto-bold-webfont.woff2) format('woff2')
+    ;
+}
+@media (max-width: 1024px) {
+    section.two .service .col > div {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    section.three .portfolio {
+        display: flex;
+        flex-direction: column;
+        padding: 1em;
+    }
+    section.four .about {
+        flex-direction: column;
+        align-items: center;
+    }
+    section.four .two {
+        text-align: center;
+    }
+    section.four .two hr {
+        width: 100%;
+    }
+    * {
+        --padding-m: 1em;
+    }
+}
